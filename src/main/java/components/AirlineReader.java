@@ -14,8 +14,8 @@ public class AirlineReader {
     private ObjectMapper objectMapper;
 
     public Airline readAirline() throws IOException {
-        objectMapper.readValue();
-
+        Airline airline = objectMapper.readValue(PATH, Airline.class);
+            return airline;
     }
 
 
