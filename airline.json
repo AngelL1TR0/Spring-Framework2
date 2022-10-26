@@ -1,0 +1,23 @@
+{
+  "name": "Iberia",
+  "flighs": [
+    {
+      "origin": "Madrid",
+      "destiny": "Paris",
+      "date": "15/5/2021",
+      "passagers": [
+        "Hector Yllera",
+        "Miguel Nebreda"
+      ]
+    },
+    {
+      "origin": "Getafe",
+      "destiny": "Muscu",
+      "date": "17/5/2022",
+      "passagers": [
+        "Hector Yllera",
+        "Miguel Nebreda"
+      ]
+    }
+  ]
+}
