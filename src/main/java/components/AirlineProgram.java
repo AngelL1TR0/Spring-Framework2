@@ -4,6 +4,9 @@ import lombok.AllArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.IOException;
+import java.util.Scanner;
+
 @AllArgsConstructor
 
 public class AirlineProgram {
@@ -12,10 +15,13 @@ public class AirlineProgram {
 
     private AirlineReader airlineReader;
     private AirlineFilter airlineFilter;
+    private Scanner sc;
 
     public void execute(){
         try {
 
+        } catch (IOException e){
+            throw new RuntimeException(e);
         }
     }
 
