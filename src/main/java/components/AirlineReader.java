@@ -3,33 +3,20 @@ package components;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import entity.Airline;
-import entity.Flight;
+import lombok.AllArgsConstructor;
 
+import java.io.File;
+import java.io.IOException;
 
-
+@AllArgsConstructor
 public class AirlineReader {
 
-    private static final String PATH = "airline.json";
     private ObjectMapper objectMapper;
+    private String inputPath;
 
-    public Airline readAirline(){
-
-        Airline airline;
-        try {
-            airline = objectMapper.readValue(PATH, Airline.class);
-            String name = airline.getName();
-            System.out.println(name);
-            for (Flight flight : airline.getFlights()) {
-                System.out.println(flight.toString());
-            }
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-        return airline;
+    public Airline readAirline() throws IOException {
+        return objectMapper.readValue(
+                new File(inputPath),
+                Airline.class);
     }
-
-
-
-
-
 }
